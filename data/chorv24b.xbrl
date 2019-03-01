@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?instance-generator id="Diwen.Xbrl" version="1.0.3.0" creationdate="2019-02-26T15:44:21:47+01:00"?>
+<xbrli:xbrl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef />
+	<pfs:FormationExpenses decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">943.50</pfs:FormationExpenses>
+	<pfs:LandBuildings decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">306307.07</pfs:LandBuildings>
+	<pfs:TangibleFixedAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">306307.07</pfs:TangibleFixedAssets>
+	<pfs:FixedAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">307250.57</pfs:FixedAssets>
+	<pfs:OtherAmountsReceivableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">46.43</pfs:OtherAmountsReceivableWithinOneYear>
+	<pfs:AmountsReceivableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">46.43</pfs:AmountsReceivableWithinOneYear>
+	<pfs:CashBankHand decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">23223.38</pfs:CashBankHand>
+	<pfs:DeferredChargesAccruedIncome decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">39.94</pfs:DeferredChargesAccruedIncome>
+	<pfs:CurrentsAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">23309.75</pfs:CurrentsAssets>
+	<pfs:Assets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">330560.32</pfs:Assets>
+	<pfs:IssuedCapital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">18600.00</pfs:IssuedCapital>
+	<pfs:Capital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">18600.00</pfs:Capital>
+	<pfs:AccumulatedProfitsLosses decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-56360.92</pfs:AccumulatedProfitsLosses>
+	<pfs:Equity decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-37760.92</pfs:Equity>
+	<pfs:FinancialDebtsRemainingTermMoreOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">214094.43</pfs:FinancialDebtsRemainingTermMoreOneYear>
+	<pfs:OtherAmountsPayableMoreOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">40000.00</pfs:OtherAmountsPayableMoreOneYear>
+	<pfs:OtherFinancialDebtsRemainingTermMoreOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">214094.43</pfs:OtherFinancialDebtsRemainingTermMoreOneYear>
+	<pfs:AmountsPayableMoreOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">254094.43</pfs:AmountsPayableMoreOneYear>
+	<pfs:OtherAmountsPayableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">114216.97</pfs:OtherAmountsPayableWithinOneYear>
+	<pfs:AmountsPayableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">114216.97</pfs:AmountsPayableWithinOneYear>
+	<pfs:AccruedChargesDeferredIncome decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">9.84</pfs:AccruedChargesDeferredIncome>
+	<pfs:AmountsPayable decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">368321.24</pfs:AmountsPayable>
+	<pfs:EquityLiabilities decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">330560.32</pfs:EquityLiabilities>
+	<pfs:ProfitLossToBeAppropriated decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-56360.92</pfs:ProfitLossToBeAppropriated>
+	<pfs:GrossOperatingMargin decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">6684.23</pfs:GrossOperatingMargin>
+	<pfs:DepreciationOtherAmountsWrittenDownFormationExpensesIntangibleTangibleFixedAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">57322.06</pfs:DepreciationOtherAmountsWrittenDownFormationExpensesIntangibleTangibleFixedAssets>
+	<pfs:MiscellaneousOperatingCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">1854.42</pfs:MiscellaneousOperatingCharges>
+	<pfs:OperatingProfitLoss decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-52492.25</pfs:OperatingProfitLoss>
+	<pfs:FinancialIncome decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">252.20</pfs:FinancialIncome>
+	<pfs:FinancialCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">4120.87</pfs:FinancialCharges>
+	<pfs:GainLossOrdinaryActivitiesBeforeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-56360.92</pfs:GainLossOrdinaryActivitiesBeforeTaxes>
+	<pfs:GainLossBeforeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-56360.92</pfs:GainLossBeforeTaxes>
+	<pfs:GainLossPeriod decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-56360.92</pfs:GainLossPeriod>
+	<pfs:GainLossToBeAppropriated decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">-56360.92</pfs:GainLossToBeAppropriated>
+	<pfs:TangibleFixedAssetsAcquisitionIncludingProducedFixedAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">363042.63</pfs:TangibleFixedAssetsAcquisitionIncludingProducedFixedAssets>
+	<pfs:TangibleFixedAssetsAcquisitionValue decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">363042.63</pfs:TangibleFixedAssetsAcquisitionValue>
+	<pfs:TangibleFixedAssetsDepreciationsAmountWrittenDownRecorded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">56735.56</pfs:TangibleFixedAssetsDepreciationsAmountWrittenDownRecorded>
+	<pfs:TangibleFixedAssetsDepreciationsAmountWrittenDown decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">56735.56</pfs:TangibleFixedAssetsDepreciationsAmountWrittenDown>
+	<pfs:AmountsPayableMoreOneYearMoreFiveYears decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2013-04-01">254094.43</pfs:AmountsPayableMoreOneYearMoreFiveYears>
+</xbrli:xbrl>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?instance-generator id="Diwen.Xbrl" version="1.0.3.0" creationdate="2019-02-26T15:43:31:92+01:00"?>
+<xbrli:xbrl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef />
+	<pfs:TradeDebtorsWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">43918</pfs:TradeDebtorsWithinOneYear>
+	<pfs:AmountsReceivableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">43918</pfs:AmountsReceivableWithinOneYear>
+	<pfs:CashBankHand decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">4879</pfs:CashBankHand>
+	<pfs:DeferredChargesAccruedIncome decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">839</pfs:DeferredChargesAccruedIncome>
+	<pfs:CurrentsAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">49636</pfs:CurrentsAssets>
+	<pfs:Assets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">49636</pfs:Assets>
+	<pfs:IssuedCapital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">18550</pfs:IssuedCapital>
+	<pfs:Capital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">18550</pfs:Capital>
+	<pfs:AccumulatedProfitsLosses decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8916</pfs:AccumulatedProfitsLosses>
+	<pfs:Equity decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">9634</pfs:Equity>
+	<pfs:SuppliersInvoicesToReceiveWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">7846</pfs:SuppliersInvoicesToReceiveWithinOneYear>
+	<pfs:TradeDebtsPayableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">7846</pfs:TradeDebtsPayableWithinOneYear>
+	<pfs:RemunerationSocialSecurity decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">7499</pfs:RemunerationSocialSecurity>
+	<pfs:TaxesRemunerationSocialSecurity decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">7499</pfs:TaxesRemunerationSocialSecurity>
+	<pfs:OtherAmountsPayableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">24657</pfs:OtherAmountsPayableWithinOneYear>
+	<pfs:AmountsPayableWithinOneYear decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">40002</pfs:AmountsPayableWithinOneYear>
+	<pfs:AmountsPayable decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">40002</pfs:AmountsPayable>
+	<pfs:EquityLiabilities decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">49636</pfs:EquityLiabilities>
+	<pfs:ProfitLossToBeAppropriated decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8916</pfs:ProfitLossToBeAppropriated>
+	<pfs:GrossOperatingMargin decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">91752</pfs:GrossOperatingMargin>
+	<pfs:RemunerationSocialSecurityPensions decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">100439</pfs:RemunerationSocialSecurityPensions>
+	<pfs:OperatingProfitLoss decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8687</pfs:OperatingProfitLoss>
+	<pfs:FinancialCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">229</pfs:FinancialCharges>
+	<pfs:GainLossOrdinaryActivitiesBeforeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8916</pfs:GainLossOrdinaryActivitiesBeforeTaxes>
+	<pfs:GainLossBeforeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8916</pfs:GainLossBeforeTaxes>
+	<pfs:GainLossPeriod decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8916</pfs:GainLossPeriod>
+	<pfs:GainLossToBeAppropriated decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">-8916</pfs:GainLossToBeAppropriated>
+	<pfs:NumberHoursActuallyWorkedFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">758</pfs:NumberHoursActuallyWorkedFullTime>
+	<pfs:NumberHoursActuallyWorkedPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">928</pfs:NumberHoursActuallyWorkedPartTime>
+	<pfs:NumberHoursActuallyWorkedTotal decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1686</pfs:NumberHoursActuallyWorkedTotal>
+	<pfs:PersonnelCostsTotal decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">100439</pfs:PersonnelCostsTotal>
+	<pfs:JointIndustrialCommittees xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">
+		<pfs:NumberJointIndustrialCommittee>
+			<pfs-vl:XCode_JointCommitteeCode_218 xmlns:pfs-vl="http://www.nbb.be/be/fr/pfs/ci/vl/2015-04-01">218</pfs-vl:XCode_JointCommitteeCode_218>
+		</pfs:NumberJointIndustrialCommittee>
+	</pfs:JointIndustrialCommittees>
+	<pfs:AverageNumberEmployeesPersonnelRegisterTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.2</pfs:AverageNumberEmployeesPersonnelRegisterTotalFullTimeEquivalents>
+	<pfs:AverageNumberEmployeesPersonnelRegisterTotalFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">0.4</pfs:AverageNumberEmployeesPersonnelRegisterTotalFullTime>
+	<pfs:AverageNumberEmployeesPersonnelRegisterTotalPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.0</pfs:AverageNumberEmployeesPersonnelRegisterTotalPartTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.8</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearFullTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearPartTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractDefinitePeriodTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.8</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractDefinitePeriodTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractDefinitePeriodFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractDefinitePeriodFullTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractDefinitePeriodPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractDefinitePeriodPartTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.8</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenFullTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenPartTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearEmployeesTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.8</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearEmployeesTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearEmployeesFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearEmployeesFullTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearEmployeesPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearEmployeesPartTime>
+	<pfs:NumberEmployeesRecordedPersonnelRegisterDuringFinancialYearTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">3.3</pfs:NumberEmployeesRecordedPersonnelRegisterDuringFinancialYearTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesRecordedPersonnelRegisterDuringFinancialYearFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">3</pfs:NumberEmployeesRecordedPersonnelRegisterDuringFinancialYearFullTime>
+	<pfs:NumberEmployeesRecordedPersonnelRegisterDuringFinancialYearPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesRecordedPersonnelRegisterDuringFinancialYearPartTime>
+	<pfs:NumberEmployeesWhoseContractTerminationDateHasBeenEnteredPersonnelRegisterDuringFinancialYearTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">2.0</pfs:NumberEmployeesWhoseContractTerminationDateHasBeenEnteredPersonnelRegisterDuringFinancialYearTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesWhoseContractTerminationDateHasBeenEnteredPersonnelRegisterDuringFinancialYearFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">2</pfs:NumberEmployeesWhoseContractTerminationDateHasBeenEnteredPersonnelRegisterDuringFinancialYearFullTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearSecondaryEducationMenTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">0.8</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearSecondaryEducationMenTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearSecondaryEducationMenPartTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearSecondaryEducationMenPartTime>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearHigherNonUniversityEducationMenTotalFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.0</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearHigherNonUniversityEducationMenTotalFullTimeEquivalents>
+	<pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearHigherNonUniversityEducationMenFullTime decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1</pfs:NumberEmployeesPersonnelRegisterClosingDateFinancialYearHigherNonUniversityEducationMenFullTime>
+	<pfs:EmployeesRecordedPersonnelRegisterTotalNumberClosingDate decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">2</pfs:EmployeesRecordedPersonnelRegisterTotalNumberClosingDate>
+	<pfs:EmployeesRecordedPersonnelRegisterAverageNumberEmployeesCalculatedFullTimeEquivalents decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1.2</pfs:EmployeesRecordedPersonnelRegisterAverageNumberEmployeesCalculatedFullTimeEquivalents>
+	<pfs:EmployeesRecordedPersonnelRegisterNumberActualWorkedHours decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">1686</pfs:EmployeesRecordedPersonnelRegisterNumberActualWorkedHours>
+	<pfs:RemunerationDirectSocialBenefits decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">23994</pfs:RemunerationDirectSocialBenefits>
+	<pfs:EmployersContributionSocialSecurity decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">2819</pfs:EmployersContributionSocialSecurity>
+	<pfs:OtherPersonnelCosts decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2015-04-01">73626</pfs:OtherPersonnelCosts>
+</xbrli:xbrl>

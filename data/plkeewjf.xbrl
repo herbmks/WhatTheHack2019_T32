@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?instance-generator id="Diwen.Xbrl" version="1.0.3.0" creationdate="2019-02-26T15:46:17:37+01:00"?>
+<xbrli:xbrl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef />
+	<tax-inc:RemainingFiscalResult decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">45133.41</tax-inc:RemainingFiscalResult>
+	<tax-inc:AllowanceCorporateEquity decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">559.72</tax-inc:AllowanceCorporateEquity>
+	<tax-inc:RemainingFiscalProfitCommonRate decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">44573.69</tax-inc:RemainingFiscalProfitCommonRate>
+	<tax-inc:LegalReserve decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">2000.00</tax-inc:LegalReserve>
+	<tax-inc:AvailableReserves decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">616.04</tax-inc:AvailableReserves>
+	<tax-inc:TaxableReserves decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">2616.04</tax-inc:TaxableReserves>
+	<tax-inc:CalculationWeightedAverageMovementEquityAfterDeductionsAllowanceCorporateEquity xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">13016.67</tax-inc:CalculationWeightedAverageMovementEquityAfterDeductionsAllowanceCorporateEquity>
+	<tax-inc:MovementEquityAfterDeductionsAllowanceCorporateEquity decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">7059.55</tax-inc:MovementEquityAfterDeductionsAllowanceCorporateEquity>
+	<tax-inc:MovementEquityAfterDeductionsAllowanceCorporateEquity decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">7059.55</tax-inc:MovementEquityAfterDeductionsAllowanceCorporateEquity>
+	<tax-inc:AllowanceCorporateEquityCurrentTaxPeriod decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">7059.55</tax-inc:AllowanceCorporateEquityCurrentTaxPeriod>
+	<tax-inc:DeductibleAllowanceCorporateEquityCurrentAssessmentYear decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">559.72</tax-inc:DeductibleAllowanceCorporateEquityCurrentAssessmentYear>
+	<tax-inc:DeductionAllowanceCorporateEquityCurrentAssessmentYear decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">559.72</tax-inc:DeductionAllowanceCorporateEquityCurrentAssessmentYear>
+	<tax-inc:AllowanceCorporateEquity decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">559.72</tax-inc:AllowanceCorporateEquity>
+	<tax-inc:TaxableReservedProfit decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">2616.04</tax-inc:TaxableReservedProfit>
+	<tax-inc:NonDeductibleTaxes decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">14995.18</tax-inc:NonDeductibleTaxes>
+	<tax-inc:NonDeductibleRegionalTaxesDutiesRetributions decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">89.00</tax-inc:NonDeductibleRegionalTaxesDutiesRetributions>
+	<tax-inc:NonDeductibleFinesConfiscationsPenaltiesAllKind decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">90.00</tax-inc:NonDeductibleFinesConfiscationsPenaltiesAllKind>
+	<tax-inc:NonDeductibleCarExpensesLossValuesCars decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">4363.95</tax-inc:NonDeductibleCarExpensesLossValuesCars>
+	<tax-inc:NonDeductibleRestaurantExpenses decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">979.24</tax-inc:NonDeductibleRestaurantExpenses>
+	<tax-inc:DisallowedExpenses decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">20517.37</tax-inc:DisallowedExpenses>
+	<tax-inc:OrdinaryDividends decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">22000.00</tax-inc:OrdinaryDividends>
+	<tax-inc:TaxableDividendsPaid decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">22000.00</tax-inc:TaxableDividendsPaid>
+	<tax-inc:FiscalResult decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">45133.41</tax-inc:FiscalResult>
+	<tax-inc:ShippingResultNotTonnageBased decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">45133.41</tax-inc:ShippingResultNotTonnageBased>
+	<tax-inc:RemainingFiscalResultBeforeOriginDistribution decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">45133.41</tax-inc:RemainingFiscalResultBeforeOriginDistribution>
+	<tax-inc:BasicTaxableAmountCommonRate decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">44573.69</tax-inc:BasicTaxableAmountCommonRate>
+	<tax-inc:RemainingFiscalProfitCommonRate decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">44573.69</tax-inc:RemainingFiscalProfitCommonRate>
+	<tax-inc:RepayableAdvanceLevies decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">0.65</tax-inc:RepayableAdvanceLevies>
+	<tax-inc:OtherRepayableWithholdingTaxes decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">0.65</tax-inc:OtherRepayableWithholdingTaxes>
+	<tax-inc:AnnualTurnoverExcludingVATCorporationCodeCurrentTaxPeriod decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">79831.05</tax-inc:AnnualTurnoverExcludingVATCorporationCodeCurrentTaxPeriod>
+	<tax-inc:AnnualWorkForceAverageCorporationCodeCurrentTaxPeriod decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">0.00</tax-inc:AnnualWorkForceAverageCorporationCodeCurrentTaxPeriod>
+	<tax-inc:BalanceSheetTotalCorporationCodeCurrentTaxPeriod decimals="INF" xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">72214.25</tax-inc:BalanceSheetTotalCorporationCodeCurrentTaxPeriod>
+	<tax-inc:AssessmentYear xmlns:tax-inc="http://www.minfin.fgov.be/be/tax/inc/2011-04-30">2011</tax-inc:AssessmentYear>
+</xbrli:xbrl>

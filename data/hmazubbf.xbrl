@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?instance-generator id="Diwen.Xbrl" version="1.0.3.0" creationdate="2019-02-26T15:46:15:67+01:00"?>
+<xbrli:xbrl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef />
+	<pfs:IssuedCapital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">10000000.00</pfs:IssuedCapital>
+	<pfs:UncalledCapital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">7500000.00</pfs:UncalledCapital>
+	<pfs:Capital decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">2500000.00</pfs:Capital>
+	<pfs:AccumulatedProfitsLosses decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">-60413.93</pfs:AccumulatedProfitsLosses>
+	<pfs:Equity decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">2439586.07</pfs:Equity>
+	<pfs:EquityLiabilities decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">2439586.07</pfs:EquityLiabilities>
+	<pfs:ParticipatingInterestsOtherEnterprisesLinkedParticipatingInterests decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:ParticipatingInterestsOtherEnterprisesLinkedParticipatingInterests>
+	<pfs:ParticipatingInterestsAmountsReceivableOtherEnterprisesLinkedParticipatingInterests decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:ParticipatingInterestsAmountsReceivableOtherEnterprisesLinkedParticipatingInterests>
+	<pfs:FinancialFixedAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:FinancialFixedAssets>
+	<pfs:CashBankHand decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">1442586.07</pfs:CashBankHand>
+	<pfs:CurrentsAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">1442586.07</pfs:CurrentsAssets>
+	<pfs:Assets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">2439586.07</pfs:Assets>
+	<pfs:FixedAssetsFormationExpensesExcluded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:FixedAssetsFormationExpensesExcluded>
+	<pfs:ProfitLossToBeAppropriated decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">-60413.93</pfs:ProfitLossToBeAppropriated>
+	<pfs:ServicesOtherGoods decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">53082.95</pfs:ServicesOtherGoods>
+	<pfs:MiscellaneousOperatingCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">695.00</pfs:MiscellaneousOperatingCharges>
+	<pfs:OperatingProfitLoss decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">-53777.95</pfs:OperatingProfitLoss>
+	<pfs:IncomeCurrentAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">72.09</pfs:IncomeCurrentAssets>
+	<pfs:FinancialIncomeNonRecurringFinancialIncomeIncluded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">72.09</pfs:FinancialIncomeNonRecurringFinancialIncomeIncluded>
+	<pfs:DebtCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">6686.44</pfs:DebtCharges>
+	<pfs:FinancialChargesNonRecurringFinancialChargesIncluded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">6686.44</pfs:FinancialChargesNonRecurringFinancialChargesIncluded>
+	<pfs:GainLossBeforeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">-60392.30</pfs:GainLossBeforeTaxes>
+	<pfs:BelgianForeignIncomeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">21.63</pfs:BelgianForeignIncomeTaxes>
+	<pfs:IncomeTaxes decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">21.63</pfs:IncomeTaxes>
+	<pfs:GainLossPeriod decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">-60413.93</pfs:GainLossPeriod>
+	<pfs:GainLossToBeAppropriated decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">-60413.93</pfs:GainLossToBeAppropriated>
+	<pfs:FinancialIncome decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">72.09</pfs:FinancialIncome>
+	<pfs:FinancialCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">6686.44</pfs:FinancialCharges>
+	<pfs:OperatingChargesNonRecurringOperatingChargesIncluded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">53777.95</pfs:OperatingChargesNonRecurringOperatingChargesIncluded>
+	<pfs:OtherMiscellaneousOperatingCharges decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">695.00</pfs:OtherMiscellaneousOperatingCharges>
+	<pfs:IncomeTaxesResultPeriodIncomeTaxesPaidWithholdingTaxesDuePaid decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">21.63</pfs:IncomeTaxesResultPeriodIncomeTaxesPaidWithholdingTaxesDuePaid>
+	<pfs:IncomeTaxesResultPeriod decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">21.63</pfs:IncomeTaxesResultPeriod>
+	<pfs:DeferredTaxesRepresentingAssets decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">60413.93</pfs:DeferredTaxesRepresentingAssets>
+	<pfs:DeferredTaxesRepresentingAssetsAccumulatedTaxLossesDeductibleFromFutureTaxableProfits decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">60413.93</pfs:DeferredTaxesRepresentingAssetsAccumulatedTaxLossesDeductibleFromFutureTaxableProfits>
+	<pfs:ParticipatingInterestsOtherEnterprisesLinkedParticipatingInterestsAssociatedEnterprisesExcluded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:ParticipatingInterestsOtherEnterprisesLinkedParticipatingInterestsAssociatedEnterprisesExcluded>
+	<pfs:ParticipatingInterestsAmountsReceivableOtherEnterprisesLinkedParticipatingInterestsAssociatedEnterprisesExcluded decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:ParticipatingInterestsAmountsReceivableOtherEnterprisesLinkedParticipatingInterestsAssociatedEnterprisesExcluded>
+	<pfs:AuditorsFees decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">8080.00</pfs:AuditorsFees>
+	<pfs:ParticipatingInterestsSharesEnterprisesLinkedParticipatingInterestAcquisitions decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:ParticipatingInterestsSharesEnterprisesLinkedParticipatingInterestAcquisitions>
+	<pfs:ParticipatingInterestsSharesEnterprisesLinkedParticipatingInterestAcquisitionValue decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">997000.00</pfs:ParticipatingInterestsSharesEnterprisesLinkedParticipatingInterestAcquisitionValue>
+	<pfs:NumberRegisteredShares decimals="INF" xmlns:pfs="http://www.nbb.be/be/fr/pfs/ci/2017-04-01">100000</pfs:NumberRegisteredShares>
+</xbrli:xbrl>
