@@ -5,9 +5,22 @@ with open('allouts.p', 'rb') as fp:
 with open('alllabels.p', 'rb') as fp:
     alllabels = pickle.load(fp)
 
-pk = ['AccruedChargesDeferredIncome', 'GainLossOrdinaryActivitiesBeforeTaxes', 'FinancialFixedAssetsAcquisitionValue', 'FinancialFixedAssets', 'NumberEmployeesPersonnelRegisterClosingDateFinancialYearFullTime', 'RemunerationDirectSocialBenefits', 'Assets', 'AmountsPayableMoreOneYearMoreOneNotMoreFiveYears', 'AmountsPayableMoreOneYearMoreOneNotMoreFiveYears', 'RemunerationSocialSecurityPensions', 'TransfersToCapitalReserves', 'EmployeesRecordedPersonnelRegisterTotalNumberClosingDate', 'AmountsPayableMoreOneYearCreditInstitutionsLeasingOtherSimilarObligations', 'NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractIndefinitePeriodTotalFullTimeEquivalents', 'NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenTotalFullTimeEquivalents', 'PersonnelCostsTotal', 'CurrentPortionAmountsPayableMoreOneYearFallingDueWithinOneYear', 'GrossOperatingMargin', 'Capital', 'LegalReserve', 'FurnitureVehicles', 'GainLossPeriod', 'AmountsPayable', 'GainLossToBeAppropriated', 'OperatingProfitLoss', 'Equity', 'AccumulatedProfitsLosses']
-pkind = np.asarray([0 ,1 ,2 ,3 ,5 ,6 ,7 ,8 ,9 ,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,34,38])
 
+VOF1 = 'AccruedChargesDeferredIncome' #GrossOperatingMargin'
+VOF2 = 'FinancialFixedAssets'
+
+
+
+pk = ['AccruedChargesDeferredIncome', 'GainLossOrdinaryActivitiesBeforeTaxes', 'FinancialFixedAssetsAcquisitionValue', 'FinancialFixedAssets', 'NumberEmployeesPersonnelRegisterClosingDateFinancialYearFullTime', 'RemunerationDirectSocialBenefits', 'Assets', 'AmountsPayableMoreOneYearMoreOneNotMoreFiveYears', 'AmountsPayableMoreOneYearMoreOneNotMoreFiveYears', 'RemunerationSocialSecurityPensions', 'TransfersToCapitalReserves', 'EmployeesRecordedPersonnelRegisterTotalNumberClosingDate', 'AmountsPayableMoreOneYearCreditInstitutionsLeasingOtherSimilarObligations', 'NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractIndefinitePeriodTotalFullTimeEquivalents', 'NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenTotalFullTimeEquivalents', 'PersonnelCostsTotal', 'CurrentPortionAmountsPayableMoreOneYearFallingDueWithinOneYear', 'GrossOperatingMargin', 'Capital', 'LegalReserve', 'FurnitureVehicles', 'GainLossPeriod', 'AmountsPayable', 'GainLossToBeAppropriated', 'OperatingProfitLoss', 'Equity', 'AccumulatedProfitsLosses']
+# pk = ['GrossOperatingMargin']
+pkind = np.asarray([0 ,1 ,2 ,3 ,5 ,6 ,7 ,8 ,9 ,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,34,38])
+# pkind = np.asarray([0])
+
+print('allouts',allouts)
+print('alllabels',alllabels)
+
+# import random
+# alllabels = allouts[:, pkind]* (1+ (random.random()-0.5) *0.01)
 allouts = allouts[:, pkind] 
 alllabels = alllabels[:, pkind] 
 print(allouts.shape[1], len(pk))
@@ -76,7 +89,7 @@ def removenan(vec):
 
 
 
-IPython.embed()
+# IPython.embed()
 
 
 
@@ -108,9 +121,9 @@ print(MSE_avg)
 
 
 
-alldiff =  (allouts - alllabels)
+alldiff =  (allouts - alllabels)**2
 # alldiff[alldiff < 2] =  np.nan
-pp = ['GrossOperatingMargin', 'GainLossPeriod']
+pp = [VOF1,VOF2]
 ppind = []
 for p in pp:
     ind = pk.index(p)
@@ -119,9 +132,9 @@ print(ppind)
 
 import random
 
-vec1 = allouts[:,ppind[0]]
+vec1 = alldiff[:,ppind[0]]
 #vec2 = allouts[:,ppind[0]]#*(random.random()-0.5)**2
-vec2 = alllabels[:,ppind[0]]
+vec2 = alldiff[:,ppind[1]]
 
 # goodind = []
 # for i in range(len(vec1)):
@@ -138,11 +151,12 @@ vec2 = alllabels[:,ppind[0]]
 
 # print('nann', removenan(vec1))
 import matplotlib.pyplot as plt
-plt.figure()
-plt.plot((vec1),label='outs')
-plt.plot((vec2),label='labels')
-plt.legend()
-plt.show()
+# plt.figure()
+# plt.plot((vec1),label='outs')
+# plt.plot((vec2),label='labels')
+# plt.legend()
+# plt.show()
+
 
 
 
@@ -161,7 +175,10 @@ plt.show()
 # vec2 = vec2[goodind]
 
 plt.figure()
+plt.title('Clustering')
 plt.scatter(vec1, vec2)
+plt.xlabel(VOF1)
+plt.ylabel(VOF2)
 plt.show()
 
 

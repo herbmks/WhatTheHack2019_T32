@@ -23,8 +23,8 @@ ONLY_ALL_PREDICT_KEYS = False
 
 
 
-# PREDICT_KEYS = ['GrossOperatingMargin']
-PREDICT_KEYS = ['AccruedChargesDeferredIncome','GainLossOrdinaryActivitiesBeforeTaxes','FinancialFixedAssetsAcquisitionValue','FinancialFixedAssets','IncomeTaxe','NumberEmployeesPersonnelRegisterClosingDateFinancialYearFullTime','RemunerationDirectSocialBenefits','Assets','AmountsPayableMoreOneYearMoreOneNotMoreFiveYears','AmountsPayableMoreOneYearMoreOneNotMoreFiveYears','RemunerationSocialSecurityPensions','TransfersToCapitalReserves','EmployeesRecordedPersonnelRegisterTotalNumberClosingDate','AmountsPayableMoreOneYearCreditInstitutionsLeasingOtherSimilarObligations','NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractIndefinitePeriodTotalFullTimeEquivalents','NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenTotalFullTimeEquivalents','PersonnelCostsTotal','CurrentPortionAmountsPayableMoreOneYearFallingDueWithinOneYear','GrossOperatingMargin','Capital','LegalReserve','FurnitureVehicles','GainLossPeriod','AmountsPayable','GainLossToBeAppropriated','OperatingProfitLoss','IntangibleFixedAssetsDepreciationsAmountWrittenDown','Taxes','IntangibleFixedAssetsDepreciationsAmountWrittenDown','TangibleFixedAssetsAcquisitionIncludingProducedFixedAssets','GainLossBeforeTaxes','OtherAmountsPayableWithinOneYear','TradeDebtsPayableWithinOneYear','CurrentsAssets','Equity','FinancialDebtsRemainingTermMoreOneYear','AmountsPayableWithinOneYear','FinancialIncome','AccumulatedProfitsLosses']
+# PREDICT_KEYS = ['AccruedChargesDeferredIncome','GainLossOrdinaryActivitiesBeforeTaxes','FinancialFixedAssetsAcquisitionValue','FinancialFixedAssets','IncomeTaxe','NumberEmployeesPersonnelRegisterClosingDateFinancialYearFullTime','RemunerationDirectSocialBenefits','Assets','AmountsPayableMoreOneYearMoreOneNotMoreFiveYears','AmountsPayableMoreOneYearMoreOneNotMoreFiveYears','RemunerationSocialSecurityPensions','TransfersToCapitalReserves','EmployeesRecordedPersonnelRegisterTotalNumberClosingDate','AmountsPayableMoreOneYearCreditInstitutionsLeasingOtherSimilarObligations','NumberEmployeesPersonnelRegisterClosingDateFinancialYearContractIndefinitePeriodTotalFullTimeEquivalents','NumberEmployeesPersonnelRegisterClosingDateFinancialYearMenTotalFullTimeEquivalents','PersonnelCostsTotal','CurrentPortionAmountsPayableMoreOneYearFallingDueWithinOneYear','GrossOperatingMargin','Capital','LegalReserve','FurnitureVehicles','GainLossPeriod','AmountsPayable','GainLossToBeAppropriated','OperatingProfitLoss','IntangibleFixedAssetsDepreciationsAmountWrittenDown','Taxes','IntangibleFixedAssetsDepreciationsAmountWrittenDown','TangibleFixedAssetsAcquisitionIncludingProducedFixedAssets','GainLossBeforeTaxes','OtherAmountsPayableWithinOneYear','TradeDebtsPayableWithinOneYear','CurrentsAssets','Equity','FinancialDebtsRemainingTermMoreOneYear','AmountsPayableWithinOneYear','FinancialIncome','AccumulatedProfitsLosses']
+PREDICT_KEYS = ['GrossOperatingMargin']
 
 # PREDICT_KEYS = ['GrossOperatingMargin']
 # PREDICT_KEYS = ['Equity']
@@ -88,12 +88,14 @@ def main():
     diffs = {}
     ids = {}
     for predict_key in PREDICT_KEYS:
-        try:
+        # try:
+        if True:
             if not os.path.isfile('models/'+predict_key+'.pth'):
                 continue
 
             global LOADMODEL
-            LOADMODEL = predict_key+'.pth'
+            # LOADMODEL = predict_key+'.pth'
+            LOADMODEL = 'GrossOperatingMargin.pth'
             allouts, alllabels, avglabel, avgval, allids = eval_nn(allxml, list(filteredkeys), predict_key)
             if allouts is None:
                 continue
@@ -102,6 +104,11 @@ def main():
             print('ALLOUTS SHAPE', allouts.shape)
             labels[predict_key] = alllabels.squeeze(1)
             diffs[predict_key] = allouts-alllabels
+            with open('allouts3.p', 'wb') as fp:
+                pickle.dump(allouts, fp, protocol=2)
+            with open('alllabels3.p', 'wb') as fp:
+                pickle.dump(alllabels, fp, protocol=2)
+
 
             print('allids SHAPE', allids.shape)
             ids[predict_key] = allids.squeeze(1)
@@ -111,9 +118,9 @@ def main():
                     print(predict_key, ' NOT IN EVALKEYS')
                 else:
                     allouts, alllabels, avglabel, avgval = eval_nn(evalxml, list(filteredkeys), predict_key, avglabel, avgval)
-        except:
-            pass
-    # remap
+    #     except:
+    #         pass
+    # # remap
     allouts = np.ones((len(allxml), len(PREDICT_KEYS)))*-10
     alllabels = np.ones((len(allxml), len(PREDICT_KEYS)))*-10
     allouts[:] = np.nan
@@ -127,18 +134,21 @@ def main():
         thiso = outs[predict_key]
         thisl = labels[predict_key]
         thisi = ids[predict_key]
-        # for i in range(nbel):
-        ii = thisi.numpy().astype(np.int)
+        for i in range(nbel):
+            ii = thisi[i].numpy().astype(np.int)
         #     # print('ii', ii)
-        #     allouts[ii, pk] = thiso[i].item()
-        #     alllabels[ ii, pk] = thisl[i].item()
+            allouts[ii, pk] = thiso[i].item()
+            alllabels[ ii, pk] = thisl[i].item()
         # ii = thisi[i]
-        allouts[ii, pk] = thiso.numpy()
-        alllabels[ii, pk] = thisl.numpy()
-    
-    with open('allouts.p', 'wb') as fp:
+        # print(thiso)
+        # print(thisl)
+        # allouts[ii, pk] = thiso.numpy()
+        # alllabels[ii, pk] = thisl.numpy()
+    print('allouts',allouts)
+    print('alllabels',alllabels)
+    with open('allouts2.p', 'wb') as fp:
         pickle.dump(allouts, fp, protocol=2)
-    with open('alllabels.p', 'wb') as fp:
+    with open('alllabels2.p', 'wb') as fp:
         pickle.dump(alllabels, fp, protocol=2)
 
     meanz = np.mean(abs(allouts), axis=1)
@@ -193,7 +203,7 @@ def eval_nn(allxml, allkeys, predict_key, avglabel=None, avgval=None):
         return None, None, None, None, None
     dl = DataLoader(ds, batch_size=BATCHSIZE, num_workers=4,shuffle=True)
 
-    model = WhatTheNet(len(allkeys), 1)
+    model = WhatTheNet(len(allkeys), 1).eval()
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(lr=0.0001, params=model.parameters())
 
@@ -226,13 +236,15 @@ def eval_nn(allxml, allkeys, predict_key, avglabel=None, avgval=None):
             assert labels.shape == outputs.shape
             for kk in range(min(15, len(labels))):
                 print(labels[kk].item(), outputs[kk].item())
-    allouts = torch.cat(allouts)
-    alllabels = torch.cat(alllabels)
+    allouts = torch.cat(allouts, dim=0)
+    alllabels = torch.cat(alllabels, dim=0)
+    print(allouts, alllabels)
     allids = torch.cat(allids)
     avglabel = ds.avglabel
     avgval = ds.avgval
-    allouts *= avglabel
-    alllabels *= avglabel
+    # allouts *= avglabel
+    # alllabels *= avglabel
+    print(allouts-alllabels)
 
 
     return allouts, alllabels, ds.avglabel, ds.avgval, allids
