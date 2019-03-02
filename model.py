@@ -10,12 +10,12 @@ class WhatTheNet(torch.nn.Module):
         super(WhatTheNet, self).__init__()
 
         # self.bn1 = torch.nn.BatchNorm1d(n_inputs)
-        self.fc1 = torch.nn.Linear(n_inputs, 3200)   # convert matrix with 16*5*5 (= 400) features to a matrix of 120 features (columns)
-        self.fc2 = torch.nn.Linear(3200, 1600)       # convert matrix with 120 features to a matrix of 84 features (columns)
-        self.fc3 = torch.nn.Linear(1600, 800)       # convert matrix with 120 features to a matrix of 84 features (columns)
-        self.fc4 = torch.nn.Linear(800, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
-        self.fc41 = torch.nn.Linear(400, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
-        self.fc5 = torch.nn.Linear(400, n_outputs)        # convert matrix with 84 features to a matrix of 10 features (columns)
+        self.fc1 = torch.nn.Linear(n_inputs, 1600)   # convert matrix with 16*5*5 (= 400) features to a matrix of 120 features (columns)
+        self.fc2 = torch.nn.Linear(1600, 800)       # convert matrix with 120 features to a matrix of 84 features (columns)
+        self.fc3 = torch.nn.Linear(800, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
+        self.fc4 = torch.nn.Linear(400, 200)       # convert matrix with 120 features to a matrix of 84 features (columns)
+        # self.fc41 = torch.nn.Linear(400, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
+        self.fc5 = torch.nn.Linear(200, n_outputs)        # convert matrix with 84 features to a matrix of 10 features (columns)
         
     def forward(self, x):
         # x = self.bn1(x)
@@ -23,7 +23,7 @@ class WhatTheNet(torch.nn.Module):
         x = torch.nn.functional.tanh(self.fc2(x))
         x = torch.nn.functional.tanh(self.fc3(x))
         x = torch.nn.functional.tanh(self.fc4(x))
-        x = torch.nn.functional.tanh(self.fc41(x))
+        # x = torch.nn.functional.tanh(self.fc41(x))
         x = self.fc5(x)
         
         
@@ -33,7 +33,7 @@ class WhatTheNet(torch.nn.Module):
 class WTHdataloader(Dataset):
     """Face Landmarks dataset."""
 
-    def __init__(self, allxml, allkeys, predict_key):
+    def __init__(self, allxml, allkeys, predict_key, avgval=None, avglabel=None):
         self.allxml = allxml
         self.predict_key = predict_key
         self.allkeys = allkeys
@@ -60,18 +60,23 @@ class WTHdataloader(Dataset):
                         val = val[0]
                     total[mapping[key]] += val
                     count[mapping[key]] += 1
-        self.avgval = total / count
+        if avgval is not None:
+            self.avgval = avgval
+            self.avglabel = avglabel
+        else:
+            self.avgval = total / count
+            self.avglabel = avglabel
 
-        self.avglabel = 0
-        self.avglabelcnt = 0
-        for xml in self.filteredxml:
-            labelval = xml[predict_key]
-            if isinstance(labelval, list):
-                labelval = labelval[0]
-            self.avglabel += labelval
-            self.avglabelcnt += 1
-        self.avglabel /= self.avglabelcnt
-        print('avges', self.avgval, self.avglabel)
+            self.avglabel = 0
+            self.avglabelcnt = 0
+            for xml in self.filteredxml:
+                labelval = xml[predict_key]
+                if isinstance(labelval, list):
+                    labelval = labelval[0]
+                self.avglabel += labelval
+                self.avglabelcnt += 1
+            self.avglabel /= self.avglabelcnt
+            print('avges', self.avgval, self.avglabel)
 
 
 
@@ -100,4 +105,26 @@ class WTHdataloader(Dataset):
         # print('label shape',label.shape)
         # print('tv',trainvec, label)
         return trainvec, label
-        
+
+
+def savemodel(epoch, model, optimizer, loss, predict_key, PATH='model.pth'):
+    print('SAVING TO ', PATH)
+    torch.save({
+            'epoch': epoch,
+            'model_state_dict': model.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'loss': loss,
+            'predict_key': predict_key
+            }, PATH)
+
+def loadmodel(epoch, model, optimizer, PATH='model.pth'):
+    print('LOADING FROM ', PATH)
+    checkpoint = torch.load(PATH,map_location='cpu')
+    model.load_state_dict(checkpoint['model_state_dict'])
+    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    epoch = checkpoint['epoch']
+    loss = checkpoint['loss']
+    predict_key = checkpoint['predict_key']
+    return epoch, model, optimizer, loss, predict_key
+
+    

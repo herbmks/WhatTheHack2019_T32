@@ -9,14 +9,25 @@ import torch
 
 CACHED = True
 
-OCCUR_THRES = 5000
+OCCUR_THRES = 1000
 BATCHSIZE = 256*8
 
 
 
+LOADMODEL = None
+SAVEMODEL = None
 
+MAX_EPOCHS = 50
+
+# LOADMODEL = 'model.pth' #'model.pth' # None to disblae
+SAVEMODEL = 'model.pth' # None to disable
+CUDA = True
+
+
+PREDICT_KEYS = ['GrossOperatingMargin','Assets']
 
 def main():
+
 
     if CACHED:
         allxml, allkeys = loadpickle()
@@ -43,12 +54,17 @@ def main():
     print('most common keys', most_common_key)
 
     predict_key = most_common_key
-    predict_key = 'Equity' # PREDICT KEY
-    train_nn(allxml, list(filteredkeys), predict_key)
+
+    for predict_key in PREDICT_KEYS:
+        print('PREDICTING KEY',  predict_key)
+        # predict_key = 'GrossOperatingMargin' # PREDICT KEY
+        global SAVEMODEL
+        SAVEMODEL = predict_key+'.pth'
+        train_nn(allxml, list(filteredkeys), predict_key)
 
 def train_nn(allxml, allkeys, predict_key):
     from torch.utils.data import Dataset, DataLoader
-    from model import WhatTheNet, WTHdataloader
+    from model import WhatTheNet, WTHdataloader, loadmodel, savemodel
     # assert len(predict_key) == 1
 
     print('len allkeys', len(allkeys))
@@ -61,15 +77,21 @@ def train_nn(allxml, allkeys, predict_key):
     ds = WTHdataloader(allxml, allkeys, predict_key)
     dl = DataLoader(ds, batch_size=BATCHSIZE, num_workers=4,shuffle=True)
 
-    model = WhatTheNet(len(allkeys), len(predict_key)).cuda()
+    model = WhatTheNet(len(allkeys), 1).cuda()
     criterion = torch.nn.MSELoss()
-    optimizer = torch.optim.Adam(lr=0.001, params=model.parameters())
+    optimizer = torch.optim.Adam(lr=0.00001, params=model.parameters())
 
 
     epoch = 0
+
+    if LOADMODEL is not None:
+        epoch, model, optimizer, loss = loadmodel(epoch, model, optimizer, LOADMODEL)
+
     # bn1 = torch.nn.BatchNorm1d(1).cuda()
     while(True):
         print('Epoch ', epoch)
+        if epoch > MAX_EPOCHS:
+            break
         for inputs, labels in dl:
             inputs, labels = inputs.cuda(), labels.cuda()
             optimizer.zero_grad()
@@ -79,13 +101,17 @@ def train_nn(allxml, allkeys, predict_key):
             # print('outputs', outputs)
             # print(len(labels))
             # labels = bn1(labels)
-            print('labels',labels)
-            print('outputs', outputs)
+            # print('labels',labels)
+            # print('outputs', outputs.shape)
+            for kk in range(15):
+                print(labels[kk].item(), outputs[kk].item())
             loss = criterion(outputs, labels)
             loss.backward()
             print('loss', loss)
             optimizer.step()
         epoch += 1
+        if SAVEMODEL is not None:
+            savemodel(epoch, model, optimizer, loss, predict_key, SAVEMODEL)
 
         
         # print(trainvec)
