@@ -10,6 +10,7 @@ import torch
 CACHED = True
 
 OCCUR_THRES = 5000
+BATCHSIZE = 256*8
 
 
 
@@ -42,7 +43,8 @@ def main():
     print('most common keys', most_common_key)
 
     predict_key = most_common_key
-    train_nn(allxml, allkeys, predict_key)
+    predict_key = 'Equity' # PREDICT KEY
+    train_nn(allxml, list(filteredkeys), predict_key)
 
 def train_nn(allxml, allkeys, predict_key):
     from torch.utils.data import Dataset, DataLoader
@@ -57,24 +59,33 @@ def train_nn(allxml, allkeys, predict_key):
     print('len allkeys2', len(allkeys))
 
     ds = WTHdataloader(allxml, allkeys, predict_key)
-    dl = DataLoader(ds, batch_size=256)
+    dl = DataLoader(ds, batch_size=BATCHSIZE, num_workers=4,shuffle=True)
 
-    model = WhatTheNet(len(allkeys), len(predict_key))
+    model = WhatTheNet(len(allkeys), len(predict_key)).cuda()
     criterion = torch.nn.MSELoss()
     optimizer = torch.optim.Adam(lr=0.001, params=model.parameters())
 
 
+    epoch = 0
+    # bn1 = torch.nn.BatchNorm1d(1).cuda()
     while(True):
-        print('Epoch ')
+        print('Epoch ', epoch)
         for inputs, labels in dl:
+            inputs, labels = inputs.cuda(), labels.cuda()
             optimizer.zero_grad()
             outputs = model(inputs)
             # print('woeifjw',inputs.shape)
             # print('labelsshape', labels.shape)
+            # print('outputs', outputs)
+            # print(len(labels))
+            # labels = bn1(labels)
+            print('labels',labels)
+            print('outputs', outputs)
             loss = criterion(outputs, labels)
             loss.backward()
             print('loss', loss)
             optimizer.step()
+        epoch += 1
 
         
         # print(trainvec)

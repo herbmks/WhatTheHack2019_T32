@@ -9,6 +9,14 @@ import pickle
 
 allfiles = os.listdir('data')
 
+##  This file reads all the XML stuff and 
+##  drops it in a list called allxml
+## each element of allxml is a dictionary
+## where the keys are the XBLR fields and the dictionary
+## values are the numbers from the XBLR files
+## when the same XBLR field is multiple times in a file, 
+## the dictionary value is a list [value1, value2]
+## the dictionary is 
 
 
 try:
