@@ -10,9 +10,9 @@ class WhatTheNet(torch.nn.Module):
         super(WhatTheNet, self).__init__()
 
         # self.bn1 = torch.nn.BatchNorm1d(n_inputs)
-        self.fc1 = torch.nn.Linear(n_inputs, 1600)   # convert matrix with 16*5*5 (= 400) features to a matrix of 120 features (columns)
-        self.fc2 = torch.nn.Linear(1600, 800)       # convert matrix with 120 features to a matrix of 84 features (columns)
-        self.fc3 = torch.nn.Linear(800, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
+        self.fc1 = torch.nn.Linear(n_inputs, 1200)   # convert matrix with 16*5*5 (= 400) features to a matrix of 120 features (columns)
+        self.fc2 = torch.nn.Linear(1200, 600)       # convert matrix with 120 features to a matrix of 84 features (columns)
+        self.fc3 = torch.nn.Linear(600, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
         self.fc4 = torch.nn.Linear(400, 200)       # convert matrix with 120 features to a matrix of 84 features (columns)
         # self.fc41 = torch.nn.Linear(400, 400)       # convert matrix with 120 features to a matrix of 84 features (columns)
         self.fc5 = torch.nn.Linear(200, n_outputs)        # convert matrix with 84 features to a matrix of 10 features (columns)
@@ -115,11 +115,11 @@ def savemodel(epoch, model, optimizer, loss, predict_key, PATH='model.pth'):
             'optimizer_state_dict': optimizer.state_dict(),
             'loss': loss,
             'predict_key': predict_key
-            }, PATH)
+            }, 'models/'+PATH)
 
 def loadmodel(epoch, model, optimizer, PATH='model.pth'):
     print('LOADING FROM ', PATH)
-    checkpoint = torch.load(PATH,map_location='cpu')
+    checkpoint = torch.load('models/'+PATH,map_location='cpu')
     model.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     epoch = checkpoint['epoch']
